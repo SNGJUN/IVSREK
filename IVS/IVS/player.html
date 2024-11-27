@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>IVS Player - Live Stream and Metadata</title>
+
+    <!-- Video.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.6.6/video-js.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Video.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.6.6/video.min.js"></script>
+    <!-- Amazon IVS Player SDK -->
+    <script src="https://player.live-video.net/1.0.0/amazon-ivs-videojs-tech.min.js"></script>
+</head>
+<body>
+    <h3>Live Video</h3>
+    <div class="video-wrapper">
+        <video
+            id="amazon-ivs-videojs"
+            class="video-js vjs-fluid vjs-big-play-centered"
+            controls
+            muted
+            autoplay
+            playsinline>
+        </video>
+    </div>
+
+    <h3>Metadata Output</h3>
+    <div id="metadata-container">
+        <!-- Section 1: Metadata Text + Image -->
+        <div id="section-1" class="metadata-section">
+            <pre id="metadata" class="metadata-text"></pre>
+            <img id="metadata-image" src="" alt="Metadata Image" />
+        </div>
+        <!-- Section 2: Title + URL -->
+        <div id="section-2" class="metadata-section">
+            <div id="metadata-output" class="metadata-text"></div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
